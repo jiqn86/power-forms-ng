@@ -10,6 +10,11 @@ import { ListComponent } from './components/list/list.component';
 import { SearchComponent } from './components/search/search.component';
 import { MainContainerComponent } from './components/main-container/main-container.component';
 
+// Services
+
+import { DataProviderService } from './services/data-provider.service';
+import { ListSearchComponent } from './components/list-search/list-search.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,13 +23,14 @@ import { MainContainerComponent } from './components/main-container/main-contain
     ListItemComponent,
     ListComponent,
     SearchComponent,
-    MainContainerComponent
+    MainContainerComponent,
+    ListSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DataProviderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

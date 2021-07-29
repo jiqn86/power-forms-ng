@@ -1,16 +1,24 @@
 <div class="row">
-    <div class=" col-3 ">
+    <div style="width:20%;">
         <app-left-menu></app-left-menu>
     </div>
-    <div class="col-3 " style="margin-left: -88px; ">
-        <div class="col ">
-            <div class="row ">
-                <app-search></app-search>
-            </div>
+
+    <div style="width:22%; min-height: 100%;
+    height: auto !important;
+    height: 100%; background-color: #e1e1e1;">
+        <div class="row ">
+
+            <app-search></app-search>
         </div>
+
         <app-list></app-list>
     </div>
+
+
     <div class="col ">
-        <app-list-item></app-list-item>
+        <div class="content-a">
+            <img src="assets/img/centerpoint_logo.png" />
+        </div>
+
     </div>
 </div>
