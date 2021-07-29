@@ -11,23 +11,11 @@ export class ListComponent implements OnInit {
 
   data: FormModel[] = [];
 
-  constructor( private dataservice: DataProviderService ) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.data = this.dataservice.getData();
-    // console.log(this.data);
-  }
+  ngOnInit(): void {}
 
-  searchItem(text: string): any{
-    let dataArr: FormModel[] = [];
-    text = text.toLowerCase();
-
-    for (let item of this.data){
-      let name = item.name.toLowerCase();
-      if ( name.indexOf(text) >= 0){
-        dataArr.push(item)
-      }
-    }
-    return dataArr;
+  updateData(e: FormModel[]) {
+    this.data = e;
   }
 }

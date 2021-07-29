@@ -1,3 +1,6 @@
+<div class="row ">
+  <app-search (dataExport)="updateData($event)"></app-search>
+</div>
 <ul id="na">
 
     <app-list-item [item]=item *ngFor="let item of data;"></app-list-item>

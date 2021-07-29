@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormModel } from 'src/app/models/form';
+import { DataProviderService } from 'src/app/services/data-provider.service';
 
 @Component({
   selector: 'app-search',
@@ -8,14 +10,27 @@ import { Router } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
 
-  constructor( private router: Router) { }
+  @Output () dataExport: EventEmitter<FormModel[]> = new EventEmitter();
+  data: FormModel[] = [];
 
-  ngOnInit(): void {}
+  constructor(private dataservice: DataProviderService) { }
+
+  ngOnInit(): void {
+    this.data = this.dataservice.getData();
+    this.dataExport.emit(this.data);
+  }
 
   searchData(text: string): any{
-    console.log(text);
+    let dataArr: FormModel[] = [];
+    text = text.toLowerCase();
 
-    this.router.navigate(['/search', text]);
-  } 
+    for (let item of this.data){
+      let name = item.name.toLowerCase();
+      if ( name.indexOf(text) >= 0){
+        dataArr.push(item)
+      }
+    }
+    this.dataExport.emit(dataArr);
+  }
 
 }
