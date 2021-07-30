@@ -1,6 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { FormModel } from '../../models/form';
-
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-list-item',
   templateUrl: './list-item.component.html',
@@ -9,6 +7,7 @@ import { FormModel } from '../../models/form';
 export class ListItemComponent implements OnInit {
 
   @Input() item: any = {};
+  @Output () urlExport: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
 
@@ -16,6 +15,6 @@ export class ListItemComponent implements OnInit {
   }
 
   getUrl(url: string): any{
-    console.log(url);
+    this.urlExport.emit(url);
   }
 }

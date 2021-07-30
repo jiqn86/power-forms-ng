@@ -12,7 +12,7 @@ export class DataProviderService {
       name: 'Severance Agreement',
       description: 'Open Adaptive Form',
       url: 'assets/pdf/ui.pdf',
-      url1: 'assets/pdf/ui1.pdf',
+      url1: 'assets/pdf/static.pdf',
       url2: 'assets/pdf/ui2.pdf',
       url3: 'assets/pdf/ui.pdf',
       img: 'assets/img/p.png'

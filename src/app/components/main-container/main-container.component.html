@@ -3,26 +3,13 @@
         <app-left-menu></app-left-menu>
     </div>
     <div class="lista">
-        <app-list></app-list>
+        <app-list (urltoMain)="getUrl($event)"></app-list>
     </div>
     <div class="col spl spr ">
-
-        <!-- Imagen -->
-        <!-- <div class="content-a"> <img src="assets/img/centerpoint_logo.png" /></div> -->
-        <!-- Fin Imagen -->
-
-        <!-- pdf-viewer -->
-        <pdf-viewer [src]="pdfSrc" [render-text]="true" style="display: block;"></pdf-viewer>
-        <!-- fin pdf viewer -->
-
-        <!--iframe con visor google-->
-
-        <!-- <iframe src="https://docs.google.com/viewerng/viewer?url=http://infolab.stanford.edu/pub/papers/google.pdf&embedded=true" frameborder="0" height="100%" width="100%">
-        </iframe>  -->
-
-        <!--iframe con PANEL DIRECTO-->
-
-        <!-- <iframe src="/assets/pdf/static.pdf" frameborder="0" height="100%" width="100%">
-        </iframe> -->
+        <div class="content-a" *ngIf="pdfSrc == ''; else pdfFrame"> <img src="assets/img/centerpoint_logo.png" /></div>
+        <ng-template #pdfFrame>
+          <iframe [src]="pdfSrc" frameborder="0" height="100%" width="100%">
+          </iframe>
+        </ng-template>
     </div>
 </div>

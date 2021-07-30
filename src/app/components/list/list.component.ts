@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { DataProviderService } from '../../services/data-provider.service';
 import { FormModel } from '../../models/form';
 
@@ -10,6 +10,7 @@ import { FormModel } from '../../models/form';
 export class ListComponent implements OnInit {
 
   data: FormModel[] = [];
+  @Output () urltoMain: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
 
@@ -17,5 +18,9 @@ export class ListComponent implements OnInit {
 
   updateData(e: FormModel[]) {
     this.data = e;
+  }
+
+  exportUrl(e: string) {
+    this.urltoMain.emit(e);
   }
 }

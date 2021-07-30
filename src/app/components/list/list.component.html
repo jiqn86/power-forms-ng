@@ -2,5 +2,5 @@
     <app-search (dataExport)="updateData($event)"></app-search>
 </div>
 <div class="col spr spl column-list">
-    <app-list-item [item]=item *ngFor="let item of data;"></app-list-item>
+    <app-list-item [item]=item *ngFor="let item of data;" (urlExport)="exportUrl($event)"></app-list-item>
 </div>
