@@ -10,11 +10,10 @@ import { ListComponent } from './components/list/list.component';
 import { SearchComponent } from './components/search/search.component';
 import { MainContainerComponent } from './components/main-container/main-container.component';
 
-// Services
-
-import { DataProviderService } from './services/data-provider.service';
-import { ListSearchComponent } from './components/list-search/list-search.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+// Services
+import { DataProviderService } from './services/data-provider.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ListComponent,
     SearchComponent,
     MainContainerComponent,
-    ListSearchComponent
+
   ],
   imports: [
     BrowserModule,

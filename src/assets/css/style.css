@@ -65,10 +65,11 @@ a:focus {
     min-height: 100vh;
 }
 
-.lista {
+
+/* .lista {
     min-height: 100vh;
     background: rgb(238, 238, 238);
-}
+} */
 
 .list-group-mine .list-group-item {
     background-color: rgb(238, 238, 238);
@@ -254,4 +255,24 @@ a.article:hover {
 
 .card-bod a {
     text-decoration: none;
+}
+
+.left-menu {
+    width: 20% !important;
+}
+
+.lista {
+    width: 22% !important;
+    min-height: 100% !important;
+    height: auto !important;
+    /* height: 100% !important; */
+    background-color: #e1e1e1 !important;
+}
+
+.spr {
+    padding-right: 0px !important;
+}
+
+.spr {
+    padding-left: 0px !important;
 }

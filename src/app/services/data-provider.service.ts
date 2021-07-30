@@ -13,7 +13,6 @@ export class DataProviderService {
       description: 'Open Adaptive Form',
       url: 'assets/pdf/ui.png',
       img: 'assets/img/p.png'
-
     },
     {
       id: 2,
@@ -21,7 +20,6 @@ export class DataProviderService {
       description: 'Open Adaptive Form 2',
       url: 'assets/pdf/ui.png',
       img: 'assets/img/p1.png'
-
     },
     {
       id: 3,
@@ -29,7 +27,6 @@ export class DataProviderService {
       description: 'Open Adaptive Form 3',
       url: 'assets/pdf/ui.png',
       img: 'assets/img/p2.png'
-
     },
     {
       id: 4,
@@ -37,7 +34,6 @@ export class DataProviderService {
       description: 'Open Adaptive Form 4',
       url: 'www',
       img: 'assets/img/p3.png'
-
     },
     {
       id: 5,
@@ -45,7 +41,6 @@ export class DataProviderService {
       description: 'Open Adaptive Form 5',
       url: 'assets/pdf/ui.png',
       img: 'assets/img/p4.png',
-
     },
   ];
 

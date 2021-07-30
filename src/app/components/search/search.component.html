@@ -1,17 +1,12 @@
-<!-- <form class="d-flex">
-    <input class="form-control me-2" type="text" placeholder="Search" >
-    <button class="btn btn-outline-success" type="button" (click)="searchData(buscar.value)">Search</button>
-</form> -->
-
 <div class="col-12 bg-secondar">
     <form class="d-flex">
         <div class="input-group rounded center-block p-2">
             <input type="text" class="form-control rounded" placeholder="Search" (keyup)="searchData(buscar.value)" #buscar>
             <span class="input-group-text border-0" id="search-addon">
-                
-                <button class="btn btn-sm" type="button" (click)="searchData(buscar.value)"><i class="fa fa-search"></i></button>
-                
-                </span>
+                <button class="btn btn-sm" type="button" (click)="searchData(buscar.value)">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span>
         </div>
     </form>
 </div>
