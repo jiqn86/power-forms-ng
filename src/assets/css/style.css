@@ -300,3 +300,12 @@ ul {
 ul a {
     text-decoration: none !important;
 }
+
+.column-list {
+    height: 520px;
+    overflow-y: scroll;
+}
+
+body {
+    overflow: hidden;
+}

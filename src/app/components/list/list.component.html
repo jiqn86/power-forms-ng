@@ -1,6 +1,6 @@
 <div class="col">
     <app-search (dataExport)="updateData($event)"></app-search>
 </div>
-<div class="col spr spl">
+<div class="col spr spl column-list">
     <app-list-item [item]=item *ngFor="let item of data;"></app-list-item>
 </div>
