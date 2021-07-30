@@ -1,5 +1,4 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
 import { FormModel } from 'src/app/models/form';
 import { DataProviderService } from 'src/app/services/data-provider.service';
 

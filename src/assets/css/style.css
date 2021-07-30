@@ -135,6 +135,7 @@ ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: #6d7fcc;
+    text-decoration: none !important;
 }
 
 ul.CTAs {
@@ -276,4 +277,21 @@ a.article:hover {
 
 .spr {
     padding-left: 0px !important;
+}
+
+
+/* .form-control:focus {
+    border-color: none !important;
+    border: none !important;
+    box-shadow: none !important;
+} */
+
+ul {
+    list-style: none !important;
+    text-align: left !important;
+    padding-left: 20px !important;
+}
+
+ul a {
+    text-decoration: none !important;
 }

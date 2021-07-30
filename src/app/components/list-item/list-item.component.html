@@ -19,10 +19,16 @@
         </ng-template>
         <ng-template ngbPanelContent>
             <div class="text-center card-bod bg-secondar">
-                <a href="{{item.url}}"><i class="fas fa-file-pdf"></i> Open Flattened PDF</a><br>
-                <a href="#"><i class="far fa-file-pdf"></i> Open Static Interactive PDF</a><br>
-                <a href="#"><i class="fas fa-edit"></i> Try Open Dynamic Interactive PDF</a><br>
-                <a href="#"><i class="fas fa-download"></i> Download Dynamic Interactive PDF</a>
+                <ul>
+                    <li (click)="getUrl(item.url)"><i class="fas fa-file-pdf"></i> Open Flattened PDF</li>
+                    <li (click)="getUrl(item.url1)"><i class="far fa-file-pdf"></i> Open Static Interactive PDF</li>
+                    <li (click)="getUrl(item.url2)"><i class="fas fa-edit"></i> Try Open Dynamic Interactive PDF</li>
+                    <li><a href="{{item.url3}}" download><i class="fas fa-download"></i> Download Dynamic Interactive PDF</a></li>
+                </ul>
+                <!-- <a href="{{item.url}}"></a><br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+                 -->
             </div>
         </ng-template>
     </ngb-panel>

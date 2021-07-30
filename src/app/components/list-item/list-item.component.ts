@@ -15,4 +15,7 @@ export class ListItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getUrl(url: string): any{
+    console.log(url);
+  }
 }
