@@ -1,10 +1,13 @@
 <div class="row ">
-  <app-search (dataExport)="updateData($event)"></app-search>
+    <app-search (dataExport)="updateData($event)"></app-search>
 </div>
-<ul id="na">
 
+<div class="accordion accordion-flush" id="accordionFlushExample">
     <app-list-item [item]=item *ngFor="let item of data;"></app-list-item>
-    <!-- <app-list-search [item]=item *ngFor="let item of data;"></app-list-search> -->
+</div>
+
+<!-- <ul id="na"> 
+    <app-list-item [item]=item *ngFor="let item of data;"></app-list-item>
     <li>
         <a href="#">
             <div class="col">
@@ -27,4 +30,4 @@
             <li><a href="#">Sub-Item 1 c</a></li>
         </ul>
     </li>
-</ul>
+</ul>-->

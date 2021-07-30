@@ -1,22 +1,17 @@
-<li>
-    <a href="#">
-        <div class="col">
-            <div class="row">
-                <div class="col-3 ">
-                    <img [src]="item.img" />
-                </div>
-                <div class="col-8">
-                    <div class="row">
-                        <span><strong>{{ item.name }}</strong></span><br>
-                        <span style="font-size: .8em; color: rgb(131, 131, 131);">{{ item.description }}</span>
-                    </div>
-                </div>
-            </div>
+<div class="accordion-item">
+    <h2 class="accordion-header" id="{{ item.name }}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            {{ item.name }} <br>
+            {{ item.description }}
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+
+            <a href="#">{{item.url}}</a>
+            <a href="#">Sub-Item 1 b</a>
+            <a href="#">Sub-Item 1 c</a>
+
         </div>
-    </a>
-    <ul>
-        <li><a href="#">{{item.url}}</a></li>
-        <li><a href="#">Sub-Item 1 b</a></li>
-        <li><a href="#">Sub-Item 1 c</a></li>
-    </ul>
-</li>
+    </div>
+</div>

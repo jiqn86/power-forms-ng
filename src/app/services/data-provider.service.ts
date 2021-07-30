@@ -8,6 +8,7 @@ export class DataProviderService {
 
   private data: FormModel[] = [
     {
+      id: 1,
       name: 'titulo1',
       description: 'descripcion 1',
       url: 'assets/pdf/ui.png',
@@ -15,6 +16,7 @@ export class DataProviderService {
 
     },
     {
+      id: 2,
       name: 'titulo2',
       description: 'descripcion 2',
       url: 'assets/pdf/ui.png',
@@ -22,6 +24,7 @@ export class DataProviderService {
 
     },
     {
+      id: 3,
       name: 'titulo3',
       description: 'descripcion 3',
       url: 'assets/pdf/ui.png',
@@ -29,6 +32,7 @@ export class DataProviderService {
 
     },
     {
+      id: 4,
       name: 'titulo4',
       description: 'descripcion 4',
       url: 'www',
@@ -36,6 +40,7 @@ export class DataProviderService {
 
     },
     {
+      id: 5,
       name: 'titulo5',
       description: 'descripcion 5',
       url: 'assets/pdf/ui.png',
