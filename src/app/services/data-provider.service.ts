@@ -14,7 +14,7 @@ export class DataProviderService {
       url: 'assets/pdf/ui.pdf',
       url1: 'assets/pdf/ui1.pdf',
       url2: 'assets/pdf/ui2.pdf',
-      url3: 'assets/pdf/ui3.pdf',
+      url3: 'assets/pdf/ui.pdf',
       img: 'assets/img/p.png'
     },
     {

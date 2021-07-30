@@ -279,12 +279,17 @@ a.article:hover {
     padding-left: 0px !important;
 }
 
-
-/* .form-control:focus {
+.form-control:focus {
     border-color: none !important;
     border: none !important;
     box-shadow: none !important;
-} */
+    box-shadow: none !important;
+}
+
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
 
 ul {
     list-style: none !important;
