@@ -27,7 +27,7 @@ export class SearchComponent implements OnInit {
     for (let item of this.data){
       let name = item.name.toLowerCase();
       if ( name.indexOf(text) >= 0){
-        dataArr.push(item)
+        dataArr.push(item);
       }
     }
     this.dataExport.emit(dataArr);
