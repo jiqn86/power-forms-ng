@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-container.component.css']
 })
 export class MainContainerComponent implements OnInit {
-
+pdfSrc = '/assets/pdf/static.pdf';
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  
 
 }

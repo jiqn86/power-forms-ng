@@ -11,6 +11,7 @@ import { SearchComponent } from './components/search/search.component';
 import { MainContainerComponent } from './components/main-container/main-container.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 // Services
 import { DataProviderService } from './services/data-provider.service';
@@ -29,7 +30,8 @@ import { DataProviderService } from './services/data-provider.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    PdfViewerModule
   ],
   providers: [DataProviderService],
   bootstrap: [AppComponent]
