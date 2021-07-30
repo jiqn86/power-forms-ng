@@ -217,67 +217,41 @@ a.article:hover {
     padding-left: .8rem !important;
 }
 
-
-/*----------------------------NEWWWWWW------------------------------------- */
-
-#na {
-    float: left;
-    width: 100%;
-    border-top: 1px solid #adb5bd;
-    border-right: 1px solid #adb5bd;
-    border-left: 1px solid #adb5bd;
-    list-style: none;
-}
-
-#na li a {
-    display: block;
-    padding: 10px 15px;
-    background: #e1e1e1;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #adb5bd;
-    text-decoration: none;
-    color: #000;
-    text-decoration: none;
-}
-
-#na li a:hover,
-#na li a.active {
-    background: #c0c0c0;
-    color: #fff;
-    text-decoration: none;
-}
-
-#na li ul {
-    display: none;
-    list-style: none;
-}
-
-#na li ul li a {
-    /* padding: 10px 25px; */
-    background: #ececec;
-    border-bottom: 1px dotted #ccc;
-    text-decoration: none;
-}
-
-#na ul {
-    padding-left: 0rem !important;
-    margin-left: 0 !important;
-}
-
-dl,
-ul,
-ol {
-    padding-left: 0rem !important;
-}
-
-#na li {
-    padding-left: 0rem !important;
-}
-
 .row {
     --bs-gutter-x: 0rem !important;
 }
 
 .input-group-text {
     padding: .2rem .1rem .1rem .1rem !important;
+}
+
+.card-header {
+    padding: .03rem 1rem !important;
+}
+
+.flexi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body {
+    padding: 0rem 0rem !important;
+}
+
+.card-bod {
+    padding: 1rem 1rem;
+}
+
+.title {
+    font-size: .8rem !important;
+}
+
+.subtitle {
+    font-size: .8rem !important;
+    color: rgb(131, 131, 131);
+}
+
+.card-bod a {
+    text-decoration: none;
 }

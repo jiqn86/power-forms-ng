@@ -1,33 +1,4 @@
 <div class="row ">
     <app-search (dataExport)="updateData($event)"></app-search>
 </div>
-
-<div class="accordion accordion-flush" id="accordionFlushExample">
-    <app-list-item [item]=item *ngFor="let item of data;"></app-list-item>
-</div>
-
-<!-- <ul id="na"> 
-    <app-list-item [item]=item *ngFor="let item of data;"></app-list-item>
-    <li>
-        <a href="#">
-            <div class="col">
-                <div class="row">
-                    <div class="col-3 ">
-                        <img src="assets/img/p.png" />
-                    </div>
-                    <div class="col-8">
-                        <div class="row">
-                            <span><strong>titulo</strong></span><br>
-                            <span style="font-size: .8em; color: rgb(131, 131, 131);">descripcion</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <ul>
-            <li><a href="#">url</a></li>
-            <li><a href="#">Sub-Item 1 b</a></li>
-            <li><a href="#">Sub-Item 1 c</a></li>
-        </ul>
-    </li>
-</ul>-->
+<app-list-item [item]=item *ngFor="let item of data;"></app-list-item>

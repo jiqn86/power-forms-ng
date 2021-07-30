@@ -14,6 +14,7 @@ import { MainContainerComponent } from './components/main-container/main-contain
 
 import { DataProviderService } from './services/data-provider.service';
 import { ListSearchComponent } from './components/list-search/list-search.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ListSearchComponent } from './components/list-search/list-search.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [DataProviderService],
   bootstrap: [AppComponent]
