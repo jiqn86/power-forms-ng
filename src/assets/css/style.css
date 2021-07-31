@@ -309,3 +309,11 @@ ul a {
 body {
     overflow: hidden;
 }
+
+.anc a {
+    color: #000 !important;
+}
+
+.card:hover {
+    background-color: rgb(241, 241, 241) !important;
+}
