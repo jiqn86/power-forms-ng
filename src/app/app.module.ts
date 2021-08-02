@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 // Services
 import { DataProviderService } from './services/data-provider.service';
+import { LoadingComponent } from './components/loading/loading.component';
+import { ListPhotosComponent } from './components/list-photos/list-photos.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +28,16 @@ import { DataProviderService } from './services/data-provider.service';
     ListComponent,
     SearchComponent,
     MainContainerComponent,
+    LoadingComponent,
+    ListPhotosComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    PdfViewerModule
+    PdfViewerModule,
+    HttpClientModule
   ],
   providers: [DataProviderService],
   bootstrap: [AppComponent]

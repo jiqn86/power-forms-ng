@@ -9,14 +9,18 @@ import { DataProviderService } from 'src/app/services/data-provider.service';
 })
 export class SearchComponent implements OnInit {
 
-  @Output () dataExport: EventEmitter<FormModel[]> = new EventEmitter();
   data: FormModel[] = [];
+  loading = true;
+  @Output () dataExport: EventEmitter<FormModel[]> = new EventEmitter();
+  @Output () loadingExport: EventEmitter<boolean> = new EventEmitter();
 
   constructor(private dataservice: DataProviderService) { }
 
   ngOnInit(): void {
     this.data = this.dataservice.getData();
     this.dataExport.emit(this.data);
+    this.loading = false;
+    this.loadingExport.emit(this.loading);
   }
 
   searchData(text: string): any{
@@ -33,3 +37,4 @@ export class SearchComponent implements OnInit {
   }
 
 }
+

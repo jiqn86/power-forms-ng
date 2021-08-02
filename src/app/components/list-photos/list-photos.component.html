@@ -1,0 +1,29 @@
+<ngb-accordion *ngFor="let photo of photos let i=index" #acc="ngbAccordion">
+    <ngb-panel *ngIf="i<5">
+        <ng-template ngbPanelHeader>
+            <button ngbPanelToggle class="btn">
+                <div class="col ">
+                    <div class="row text-left">
+                        <div class="col-3 flexi">
+                            <img width="32px" height="32px" [src]="photo.url" />
+                        </div>
+                        <div class="col-9">
+                            <div class="row">
+                                <span class="title"><strong>{{ photo.title }}</strong></span><br>
+                                <span  class="subtitle">{{ photo.albumId }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </button>
+        </ng-template>
+        <ng-template ngbPanelContent>
+            <div class="text-center card-bod bg-secondar">
+                <ul class="ul-item">
+                    <li><i class="fas fa-file-pdf"></i> Open Flattened PDF</li>
+
+                </ul>
+            </div>
+        </ng-template>
+    </ngb-panel>
+</ngb-accordion>
