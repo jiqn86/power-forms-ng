@@ -16,12 +16,21 @@ export class SearchComponent implements OnInit {
 
   constructor(private dataservice: DataProviderService) {}
 
+  /**
+   * NG life cycle
+   */
   ngOnInit(): void {
+    this.getInitData();
+  }
+
+  /**
+   * Gets init data from the server
+   */
+  getInitData(): void {
     this.dataservice.getInfo().subscribe(
       resp => {
         this.info = resp;
         this.dataExport.emit(this.info);
-        console.log(this.info);
         this.loadingInfo = {loading: false, error: false};
         this.loadingExport.emit(this.loadingInfo);
       }, () => {
@@ -30,6 +39,10 @@ export class SearchComponent implements OnInit {
       });
   }
 
+  /**
+   * Searches by the text in the parameter
+   * @param text string, the text to search by
+   */
   searchData(text: string): any{
     let dataArr: FormModel[] = [];
     text = text.toLowerCase();
