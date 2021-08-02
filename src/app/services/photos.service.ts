@@ -11,6 +11,6 @@ export class PhotosService {
   constructor( private http: HttpClient) { }
 
   getPhotos(): Observable<Photos[]>{
-    return this.http.get<Photos[]>('https://jsonplaceholder.typicode.com/photos');
+    return this.http.get<Photos[]>('http://localhost:80/local.php');
   }
 }

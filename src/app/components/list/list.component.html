@@ -3,6 +3,6 @@
 </div>
 <div class="col spr spl column-list">
     <app-loading *ngIf="loading"></app-loading>
-    <app-list-photos [photos]="photos"></app-list-photos>
-    <app-list-item [item]=item *ngFor="let item of data;" (urlExport)="exportUrl($event)"></app-list-item>
+    <!-- <app-list-photos [photos]="photos"></app-list-photos> -->
+    <app-list-item [item]=item *ngFor="let item of info;" (urlExport)="exportUrl($event)"></app-list-item>
 </div>

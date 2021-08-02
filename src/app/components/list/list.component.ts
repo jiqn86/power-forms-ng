@@ -10,19 +10,21 @@ import { Photos } from '../../models/photos';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-
-  data: FormModel[] = [];
-  loading: boolean;
-  photos: Photos[] = [];
   @Output () urltoMain: EventEmitter<string> = new EventEmitter();
+  info: FormModel[] = [];
+  loading = true;
+
+  // data: FormModel[] = [];
+  // photos: Photos[] = [];
 
   constructor( private photosService: PhotosService) {
-    this.loading = true;
-    // jsonplaceholder - Servicio photos
-    this.photosService.getPhotos().subscribe(resp => {
-      this.photos = resp;
-      this.loading = false;
-    });
+    // this.loading = true;
+    // // jsonplaceholder - Servicio photos
+    // this.photosService.getPhotos().subscribe(resp => {
+    //   this.photos = resp;
+    //   console.log(this.photos);
+    //   this.loading = false;
+    // });
   }
 
   ngOnInit(): void {
@@ -32,7 +34,7 @@ export class ListComponent implements OnInit {
     this.loading = e;
   }
   updateData(e: FormModel[]) {
-    this.data = e;
+    this.info = e;
   }
 
   exportUrl(e: string) {

@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { FormModel } from '../models/form';
 
 @Injectable({
@@ -258,7 +260,11 @@ export class DataProviderService {
     },
   ];
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
+
+  getInfo(): Observable<FormModel[]>{
+    return this.http.get<FormModel[]>('http://localhost:80/local.php');
+  }
 
   getData(): FormModel[]{
     return this.data;
