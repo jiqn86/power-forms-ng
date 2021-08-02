@@ -9,31 +9,25 @@ import { DataProviderService } from 'src/app/services/data-provider.service';
 })
 export class SearchComponent implements OnInit {
   @Output () dataExport: EventEmitter<FormModel[]> = new EventEmitter();
-  @Output () loadingExport: EventEmitter<boolean> = new EventEmitter();
+  @Output () loadingExport: EventEmitter<any> = new EventEmitter();
 
   info: FormModel[] = [];
-  loading = true;
-  
-  // data: FormModel[] = [];
+  loadingInfo = {loading: true, error: false};
 
-  constructor(private dataservice: DataProviderService) {
-    this.loading = true;
-    // jsonplaceholder - Servicio photos
-    this.dataservice.getInfo().subscribe(resp => {
-      this.info = resp;
-      this.dataExport.emit(this.info);
-      console.log(this.info);
-      this.loading = false;
-      this.loadingExport.emit(this.loading);
-    });
-  }
+  constructor(private dataservice: DataProviderService) {}
 
   ngOnInit(): void {
-
-    // this.data = this.dataservice.getData();
-    // this.dataExport.emit(this.data);
-    // this.loading = false;
-    // this.loadingExport.emit(this.loading);
+    this.dataservice.getInfo().subscribe(
+      resp => {
+        this.info = resp;
+        this.dataExport.emit(this.info);
+        console.log(this.info);
+        this.loadingInfo = {loading: false, error: false};
+        this.loadingExport.emit(this.loadingInfo);
+      }, () => {
+        this.loadingInfo = {loading: false, error: true};
+        this.loadingExport.emit(this.loadingInfo);
+      });
   }
 
   searchData(text: string): any{
