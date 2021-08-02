@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormModel } from 'src/app/models/form';
 import { DataProviderService } from 'src/app/services/data-provider.service';
+import { LoadingModel } from '../../models/loading';
 
 @Component({
   selector: 'app-search',
@@ -9,10 +10,10 @@ import { DataProviderService } from 'src/app/services/data-provider.service';
 })
 export class SearchComponent implements OnInit {
   @Output () dataExport: EventEmitter<FormModel[]> = new EventEmitter();
-  @Output () loadingExport: EventEmitter<any> = new EventEmitter();
+  @Output () loadingExport: EventEmitter<LoadingModel> = new EventEmitter();
 
   info: FormModel[] = [];
-  loadingInfo = {loading: true, error: false};
+  loadingInfo: LoadingModel = {loading: true, error: false};
 
   constructor(private dataservice: DataProviderService) {}
 
@@ -43,7 +44,7 @@ export class SearchComponent implements OnInit {
    * Searches by the text in the parameter
    * @param text string, the text to search by
    */
-  searchData(text: string): any{
+  searchData(text: string): void{
     let dataArr: FormModel[] = [];
     text = text.toLowerCase();
 

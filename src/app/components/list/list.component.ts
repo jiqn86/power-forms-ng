@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormModel } from '../../models/form';
+import { LoadingModel } from '../../models/loading';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -27,7 +28,7 @@ export class ListComponent {
    * Sets the loading and error flags
    * @param e any The object with loading and error info
    */
-  getLoading(e: any): void {
+  getLoading(e: LoadingModel): void {
     this.loading = e.loading;
     this.error = e.error;
   }

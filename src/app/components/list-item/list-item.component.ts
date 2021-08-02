@@ -15,7 +15,7 @@ export class ListItemComponent {
    * Emits the url to the parent component
    * @param url string
    */
-  getUrl(url: string): any{
+  getUrl(url: string): void{
     this.urlExport.emit(url);
   }
 }
