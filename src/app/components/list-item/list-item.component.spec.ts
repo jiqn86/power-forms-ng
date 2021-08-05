@@ -25,7 +25,7 @@ describe('ListItemComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  xit('EMIT URL VALUE', () => {
+  xit('should emit URL value', () => {
     let url = '';
     component.urlExport.subscribe((e: string) =>{
       url = e;

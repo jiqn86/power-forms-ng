@@ -22,21 +22,17 @@ describe('MainContainerComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it('VIEW A DEFAULT IMAGE', () => {
+  it('should create and show a default image', () => {
     const element: HTMLElement = fixture.debugElement.query(By.css('.content-a')).nativeElement;
+    expect(component).toBeTruthy();
     expect(element.innerHTML).toContain('.png');
-    });
-
-  it('LOADING THE IFRAME', () => {
-    if (component.pdfSrc !== ''){
-    let pdfFrame: HTMLElement = fixture.debugElement.query(By.css('#pdfFrame')).nativeElement;
-    expect(pdfFrame.innerHTML).toContain('iframe');
-    }
   });
 
+  it('should create the iframe', () => {
+    component.getUrl('https://fakeUrl.com');
+    fixture.detectChanges();
+    let pdfFrame: HTMLElement = fixture.debugElement.query(By.css('.pdf-container')).nativeElement;
+    expect(pdfFrame.innerHTML).toContain('iframe');
+  });
 
 });

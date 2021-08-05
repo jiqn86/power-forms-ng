@@ -5,7 +5,7 @@
     <div class="lista">
         <app-list (urltoMain)="getUrl($event)"></app-list>
     </div>
-    <div class="col spl spr ">
+    <div class="col spl spr pdf-container">
         <div class="content-a" *ngIf="pdfSrc == ''; else pdfFrame"> <img src="assets/img/centerpoint_logo.png" /></div>
         <ng-template #pdfFrame>
           <iframe [src]="pdfSrc" frameborder="0" height="100%" width="100%">
